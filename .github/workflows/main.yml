@@ -8,18 +8,18 @@ jobs:
   CI:
     runs-on: ubuntu-latest
     steps:
-      - nome: Construir a imagem do container
+      - name: Construir a imagem do container
         run: echo "docker build"
-      - nome: Login no Docker hub
+      - name: Login no Docker hub
         run: echo "docker login"
-      - nome: Subir imagem no docker registry
+      - name: Subir imagem no docker registry
         run: echo "docker push"
   CD:
     runs-on: ubuntu-latest
     steps:
-      - nome: Autenticar na AWS
+      - name: Autenticar na AWS
         run: echo "Autenticar na AWS"
-      - nome: Configurar Kubeconfig
+      - name: Configurar Kubeconfig
         run: echo "Configurar Kubeconfig"
-      - nome: Aplicar o deploy
+      - name: Aplicar o deploy
         run: echo "kubectl apply"

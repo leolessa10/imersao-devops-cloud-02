@@ -41,8 +41,8 @@ jobs:
         run: aws eks update-kubeconfig --name eks-imersao --region us-east-1
       - name: Deploy to Kubernetes cluster
         uses: Azure/k8s-deploy@v4.9
-          with:
-            manifests: |
-              ./kube-news/k8s/deployment.yaml
-            images: |
-              leolessa10/kube-news:${{ github.run_number }}
+        with:
+          manifests: |
+            ./kube-news/k8s/deployment.yaml
+          images: |
+            leolessa10/kube-news:${{ github.run_number }}

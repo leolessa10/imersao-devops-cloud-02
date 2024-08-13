@@ -42,7 +42,7 @@ jobs:
 
       - name: Configurar Kubeconfig
         run: |
-          gcloud container clusters get-credentials nome-do-cluster --zone us-central1-a
+          gcloud container clusters get-credentials gke-cluster --zone us-central1-a
 
       - name: Deploy to GKE cluster
         uses: Azure/k8s-deploy@v4.9

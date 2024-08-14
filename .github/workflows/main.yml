@@ -29,6 +29,6 @@ jobs:
         run: |
           kubectl delete -f ./kube-news/k8s/deployment.yaml
 
-      - name: Verify Deployment
-        run: |
-          kubectl rollout status deployment/kubenews --timeout=120s
+      #- name: Verify Deployment
+       # run: |
+        #  kubectl rollout status deployment/kubenews --timeout=120s

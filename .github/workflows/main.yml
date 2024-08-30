@@ -27,7 +27,7 @@ jobs:
 
       - name: UnDeploy to GKE
         run: |
-          kubectl apply -f ./kube-news/k8s/deployment.yaml
+          kubectl delete -f ./kube-news/k8s/deployment.yaml
 
       #- name: Verify Deployment
        # run: |

@@ -25,9 +25,9 @@ jobs:
           location: ${{ secrets.GKE_ZONE }}
           project_id: ${{ secrets.GCP_PROJECT_ID }}
 
-      - name: UnDeploy to GKE
+      - name: Deploy to GKE
         run: |
-          kubectl delete -f ./kube-news/k8s/deployment.yaml
+          kubectl apply -f ./kube-news/k8s/deployment.yaml
 
       #- name: Verify Deployment
        # run: |
